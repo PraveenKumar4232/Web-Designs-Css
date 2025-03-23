@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing:border-box;
+        }
+        body{
+           height:100vh;
+           width:100vw;
+           display:flex;
+           align-items: center;
+           justify-content:center;
+           background-color: black;
+        }
+        .container{
+            height: 300px;
+            width: 500px;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background-color: black;
+            background-image: url(https://images.pexels.com/photos/735552/pexels-photo-735552.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+            background-size: cover;
+            -webkit-backdrop-filter: blur(5px);
+            background-image: url(https://images.pexels.com/photos/164357/pexels-photo-164357.jpeg?auto=compress&cs=tinysrgb&w=400);
+
+            background-image: url(https://images.pexels.com/photos/3359257/pexels-photo-3359257.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+            
+           
+        }
+        .container::before,
+        .container::after{
+            content: "";
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            height: calc(100% + 8px );
+            width:  calc(100% + 8px );
+            background-image: linear-gradient(45deg,white,black,white);
+            z-index:-1;
+            background-size: 400%;
+            transition: 8s;
+            animation:animate 10s linear infinite;
+        }
+ .container::after{
+            filter:blur(20px);
+       }       
+        @keyframes animate{
+            0%{
+                background-position: 0;
+            }
+            50%{
+                background-position: 300%;
+            }
+            100%{
+                background-position: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    </div>
+    
+</body>
+</html>

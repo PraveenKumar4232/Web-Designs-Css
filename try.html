@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing:border-box;
+        }
+        body{
+            height:100vh;
+            width:100vw;
+            background-color:black;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+        .container{
+            height: 210px;
+            width: 150px;
+            position: relative;
+            /* background-color: white; */
+        }
+        span{
+            position: absolute;
+            background-color: blue;
+            height: 100%;
+            width:50px;
+           
+        }
+        span:nth-child(1){
+           /* height:100%;
+           width: 50px; */
+           height: 0;
+           width: 0;
+           top: 0;
+           bottom: 0;
+           animation: animate1 3s linear forwards;
+        }
+        span:nth-child(2){
+           /* height:50px;
+           width: 100%; */
+           height:0;
+           width: 0;
+           top: 0;
+           right:0;
+           animation: animate 3s linear forwards;
+           animation-delay: 2s;
+           
+        }
+        span:nth-child(3){
+            /* height:50px;
+            width: 100%; */
+            height: 0;
+            width: 0;
+            display: flex;
+            top: 80px;
+            animation: animate 3s linear forwards;
+            animation-delay: 5s;
+            border-bottom-right-radius: 30px;
+            border-top-right-radius: 30px;
+        }
+        span:nth-child(4){
+            /* height: 50px;
+            width: 100%; */
+            height: 0;
+            width: 0;
+            right: 0;
+            bottom: 0;
+            animation: animate 3s linear forwards;
+            animation-delay: 3s;
+           
+        }
+        @keyframes animate{
+            100%{
+                height: 50px;
+            width: 100%;
+           
+            }
+        }
+        @keyframes animate1{
+            100%{
+                height: 100%;
+                width: 50px;
+            }
+        }
+        /* .box{
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            background-color: rgb(15, 15, 15);
+            margin-top:-175px;
+            margin-right: -150px;
+            position: absolute;
+            z-index: 5;
+        } */
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <!-- <div class="box"></div> -->
+    
+</body>
+</html>
